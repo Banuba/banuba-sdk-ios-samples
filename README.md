@@ -28,6 +28,7 @@ This repository contains the following examples:
 - [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime, 
 - [`hands`](hands/) set of samples related to hands (rings, watch, gestures etc.),  
 - [`videocall`](videocall/) demonstrates Agora.io SDK integration to enable augmented reality filters in video calls.
+- [`spider`](spider/) apply spider effect with animations  
 
 Please, note, that individual samples may contain own `README` files. Consider them.
 
