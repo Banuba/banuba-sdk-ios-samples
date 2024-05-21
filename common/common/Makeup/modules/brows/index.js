@@ -13,7 +13,7 @@ const RBrowFragmentShader = "modules/brows/rbrow.frag";
 
 const QuadMesh = "modules/brows/quad.bsm2";
 
-class Brows {
+class Eyebrows {
     constructor() {
         Object.defineProperty(this, "_brows_color", {
             enumerable: true,
@@ -77,4 +77,4 @@ class Brows {
     }
 }
 
-exports.Brows = Brows;
+exports.Eyebrows = Eyebrows;

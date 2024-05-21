@@ -4,6 +4,7 @@ BNB_DECLARE_SAMPLER_2D(0, 1, liner1);
 
 
 
+
 float gauss( float x, float y, float sigma_mult )
 {
 	return exp( -sigma_mult*(x*x + y*y) );

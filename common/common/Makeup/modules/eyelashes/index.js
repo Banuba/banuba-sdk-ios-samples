@@ -11,7 +11,7 @@ const DefaultEyelashesTexture = "modules/eyelashes/eyelashes.ktx";
 
 const EyeLashesVertexShader = "modules/eyelashes/eyelashes.vert";
 
-class Eyelashes {
+class Eyelashes3d {
     constructor() {
         Object.defineProperty(this, "_face", {
             enumerable: true,
@@ -58,12 +58,12 @@ class Eyelashes {
         }
         return this._lashes.material.uniforms.var_eyelashes_color.value().join(" ");
     }
-    texture(filename) {
-        this._lashes.material.uniforms.tex_diffuse.load(filename);
+    set(filename) {
+        this._lashes.material.uniforms.tex_diffuse.load("images/"+filename);
     }
     clear() {
         this.color("0 0 0 0");
     }
 }
 
-exports.Eyelashes = Eyelashes;
+exports.Eyelashes3d = Eyelashes3d;

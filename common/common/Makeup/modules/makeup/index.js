@@ -36,6 +36,7 @@ class Makeup {
                     tex_eyeliner: new modules_scene_index.Image(),
                     tex_lashes: new modules_scene_index.Image(),
                     tex_makeup: new modules_scene_index.Image(),
+                    tex_face_mask: new modules_scene_index.SegmentationMask("FACE"),
                     var_contour_color: new modules_scene_index.Vector4(0, 0, 0, 1),
                     var_blushes_color: new modules_scene_index.Vector4(0, 0, 0, 1),
                     var_highlighter_color: new modules_scene_index.Vector4(0, 0, 0, 1),
@@ -61,10 +62,16 @@ class Makeup {
         this._makeup.material.uniforms.var_eyeliner_color.subscribe(onChange);
         this._makeup.material.uniforms.var_lashes_color.subscribe(onChange);
         modules_scene_index.add(this._makeup);
+
+        this._makeup.material.uniforms.tex_face_mask.enable();
     }
     set(filename) {
         this._makeup.visible(true);
-        this._makeup.material.uniforms.tex_makeup.load(filename);
+        if(filename == ""){
+            this._makeup.material.uniforms.tex_makeup.load(filename);
+        }else{
+            this._makeup.material.uniforms.tex_makeup.load("images/"+filename);
+        }
     }
     contour(value) {
         this._makeup.visible(true);

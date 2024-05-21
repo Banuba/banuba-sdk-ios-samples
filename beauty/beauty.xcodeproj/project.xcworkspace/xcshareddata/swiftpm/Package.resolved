@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "bnbbackground",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sdk-banuba/BNBBackground.git",
+      "state" : {
+        "revision" : "cedcac64b19966182eb7c5273802ef307735384d",
+        "version" : "1.13.0"
+      }
+    },
+    {
       "identity" : "bnbeffectplayer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",

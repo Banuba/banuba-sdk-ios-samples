@@ -79,7 +79,7 @@ class Hair {
             const color = (_a = colors[i]) !== null && _a !== void 0 ? _a : "0 0 0 0";
             const idx = i;
             const uniform = `var_hair_color${idx}`;
-            if (typeof color !== "undefined") {
+            if (typeof colors[i] !== "undefined") {
                 this._hair.material.uniforms[uniform].value(color);
             }
             colors[i] = this._hair.material.uniforms[uniform].value().join(" ");
@@ -97,7 +97,7 @@ class Hair {
             const color = (_a = colors[i]) !== null && _a !== void 0 ? _a : "0 0 0 0";
             const idx = i;
             const uniform = `var_hair_color${idx}`;
-            if (typeof color !== "undefined") {
+            if (typeof colors[i] !== "undefined") {
                 this._hair.material.uniforms[uniform].value(color);
             }
             colors[i] = this._hair.material.uniforms[uniform].value().join(" ");

@@ -14,6 +14,8 @@ vec2 var_uv;
 BNB_OUT(1)
 vec2 var_face_uv;
 
+BNB_OUT(2) vec2 var_face_mask_uv;
+
 void main()
 {
     gl_Position = bnb_MVP * vec4(attrib_pos, 1.);
@@ -25,4 +27,6 @@ void main()
 #endif
 
     var_face_uv = attrib_uv;
+
+    var_face_mask_uv = vec2(vec4(gl_Position.xy/gl_Position.w,1.,1.) * face_nn_transform);
 }

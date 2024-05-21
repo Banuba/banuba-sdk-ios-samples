@@ -33,7 +33,8 @@ class LipsLiner {
     }
     color(color) {
         this._liner.material.uniforms.lips_mask.enable();
-        this._liner.visible(true);
+
+        this._liner.visible(true)
         if (typeof color !== "undefined") {
             this._liner.material.uniforms.var_lips_liner_color.value(color);
         }
@@ -41,6 +42,10 @@ class LipsLiner {
     }
     clear() {
         this.color("0 0 0 0");
+    }
+
+    disable(){
+        this.clear();
     }
 }
 
