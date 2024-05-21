@@ -16,6 +16,7 @@
 		13DF0CE22BF62BF300770192 /* BNBFaceTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE12BF62BF300770192 /* BNBFaceTracker */; };
 		13DF0CE52BF62C0100770192 /* BNBEyes in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE42BF62C0100770192 /* BNBEyes */; };
 		13DF0CE82BF62C0A00770192 /* BNBLips in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE72BF62C0A00770192 /* BNBLips */; };
+		4C14F3B32BFCADFD00273A93 /* BNBBackground in Frameworks */ = {isa = PBXBuildFile; productRef = 4C14F3B22BFCADFD00273A93 /* BNBBackground */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13DF0CE22BF62BF300770192 /* BNBFaceTracker in Frameworks */,
+				4C14F3B32BFCADFD00273A93 /* BNBBackground in Frameworks */,
 				1383E9B92BCEA02300660AE3 /* libcommon.a in Frameworks */,
 				13DF0CE82BF62C0A00770192 /* BNBLips in Frameworks */,
 				13DF0CDF2BF62BEB00770192 /* BNBSdkApi in Frameworks */,
@@ -120,6 +122,7 @@
 				13DF0CE12BF62BF300770192 /* BNBFaceTracker */,
 				13DF0CE42BF62C0100770192 /* BNBEyes */,
 				13DF0CE72BF62C0A00770192 /* BNBLips */,
+				4C14F3B22BFCADFD00273A93 /* BNBBackground */,
 			);
 			productName = camera;
 			productReference = 1383E98E2BCE98D400660AE3 /* beauty.app */;
@@ -154,6 +157,7 @@
 				13DF0CE02BF62BF300770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */,
 				13DF0CE32BF62C0100770192 /* XCRemoteSwiftPackageReference "BNBEyes" */,
 				13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */,
+				4C14F3B12BFCADFD00273A93 /* XCRemoteSwiftPackageReference "BNBBackground" */,
 			);
 			productRefGroup = 1383E98F2BCE98D400660AE3 /* Products */;
 			projectDirPath = "";
@@ -457,6 +461,14 @@
 				minimumVersion = 1.13.0;
 			};
 		};
+		4C14F3B12BFCADFD00273A93 /* XCRemoteSwiftPackageReference "BNBBackground" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdk-banuba/BNBBackground.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -479,6 +491,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */;
 			productName = BNBLips;
+		};
+		4C14F3B22BFCADFD00273A93 /* BNBBackground */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C14F3B12BFCADFD00273A93 /* XCRemoteSwiftPackageReference "BNBBackground" */;
+			productName = BNBBackground;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

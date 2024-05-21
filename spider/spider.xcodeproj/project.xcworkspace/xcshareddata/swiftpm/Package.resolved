@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "bnbbackground",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBBackground.git",
-      "state" : {
-        "revision" : "cedcac64b19966182eb7c5273802ef307735384d",
-        "version" : "1.13.0"
-      }
-    },
-    {
       "identity" : "bnbeffectplayer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",
@@ -19,29 +10,11 @@
       }
     },
     {
-      "identity" : "bnbeyes",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBEyes.git",
-      "state" : {
-        "revision" : "d38aa754ae7ed55ffdfd12ed989958686914db02",
-        "version" : "1.13.0"
-      }
-    },
-    {
       "identity" : "bnbfacetracker",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBFaceTracker.git",
       "state" : {
         "revision" : "6f12f5b04260ffce01d36b156a79231d5705c4fb",
-        "version" : "1.13.0"
-      }
-    },
-    {
-      "identity" : "bnblips",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sdk-banuba/BNBLips.git",
-      "state" : {
-        "revision" : "4b353a5b34ed58daee1122d2469520e6585ace29",
         "version" : "1.13.0"
       }
     },
