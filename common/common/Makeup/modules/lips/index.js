@@ -59,8 +59,8 @@ class Lips {
                     tex_noise: new modules_scene_index.Image(GlitterTexture),
                     var_lips_color: this._shared.var_lips_color,
                     var_lips_saturation_brightness: this._shared.var_lips_saturation_brightness,
-                    var_lips_shine_intensity_bleeding_scale: new modules_scene_index.Vector4(1, 0.5, 1),
-                    var_lips_glitter_bleeding_intensity_grain: new modules_scene_index.Vector4(1, 1, 0.4),
+                    var_lips_shine_intensity_bleeding_scale: new modules_scene_index.Vector4(0, 0, 0),
+                    var_lips_glitter_bleeding_intensity_grain: new modules_scene_index.Vector4(0, 0, 0),
                 },
                 state: {
                     backFaces: true,
@@ -207,8 +207,8 @@ class Lips {
     clear() {
         this.color("0 0 0 0");
         this._matt.material.uniforms.var_lips_saturation_brightness.value(1, 1);
-        this._shiny.material.uniforms.var_lips_shine_intensity_bleeding_scale.value(1, 0.5, 1);
-        this._shiny.material.uniforms.var_lips_glitter_bleeding_intensity_grain.value(1, 1, 0.4);
+        this._shiny.material.uniforms.var_lips_shine_intensity_bleeding_scale.value(0, 0, 0);
+        this._shiny.material.uniforms.var_lips_glitter_bleeding_intensity_grain.value(0, 0, 0);
     }
 }
 

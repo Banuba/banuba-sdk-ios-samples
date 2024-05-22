@@ -33,11 +33,7 @@ class LutFilter {
     }
     /** Sets the filter LUT */
     set(filename) {
-        if(filename == ""){
-            this._filter.material.uniforms.tex_filter.load(filename);
-        }else{
-            this._filter.material.uniforms.tex_filter.load("images/"+filename);
-        }
+        this._filter.material.uniforms.tex_filter.load(filename);
         this.strength(this.strength());
     }
     /** Sets the filter strength from 0 to 1 */

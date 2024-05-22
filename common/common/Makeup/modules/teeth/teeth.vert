@@ -1,28 +1,23 @@
 #include <bnb/glsl.vert>
+#include <bnb/matrix_operations.glsl>
 
 BNB_LAYOUT_LOCATION(0)
-BNB_IN vec3 attrib_pos;
-BNB_LAYOUT_LOCATION(1)
-BNB_IN vec3 attrib_pos_static;
-BNB_LAYOUT_LOCATION(2)
-BNB_IN vec2 attrib_uv;
-BNB_LAYOUT_LOCATION(3)
-BNB_IN vec4 attrib_red_mask;
+BNB_IN vec2 attrib_pos;
 
 BNB_OUT(0)
-vec2 var_uv;
-BNB_OUT(1)
-vec3 var_red_mask;
+vec4 var_uv;
 
 void main()
 {
-    gl_Position = bnb_MVP * vec4(attrib_pos, 1.);
-
-    var_uv = (gl_Position.xy / gl_Position.w) * 0.5 + 0.5;
+    vec2 uv = attrib_pos * 0.5 + 0.5;
 
 #ifdef BNB_VK_1
-    var_uv.y = 1. - var_uv.y;
+    uv.y = 1. - uv.y;
 #endif
 
-    var_red_mask = attrib_red_mask.xyz;
+    var_uv.zw = uv;
+
+    mat3 nn_mat = mat3(teeth_nn_transform[0].xyz, teeth_nn_transform[1].xyz, teeth_nn_transform[2].xyz);
+    gl_Position = vec4((vec3(uv, 1.) * bnb_inverse_trs2d(nn_mat)).xy, 0., 1.);
+    var_uv.xy = gl_Position.xy * 0.5 + 0.5;
 }

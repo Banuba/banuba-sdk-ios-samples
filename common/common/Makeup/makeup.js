@@ -6,16 +6,12 @@ const modules_faceMorph_index = require('./modules/face-morph/index.js');
 const modules_hair_index = require('./modules/hair/index.js');
 const modules_brows_index = require('./modules/brows/index.js');
 const modules_eyeBags_index = require('./modules/eye-bags/index.js');
-const modules_glossyEyeshadows_index = require('./modules/glossy-eyeshadows/index.js');
-const modules_glossyHighlighter_index = require('./modules/glossy-highlighter/index.js');
-const modules_glossyBlush_index = require('./modules/glossy-blush/index.js');
 const modules_eyelashes_index = require('./modules/eyelashes/index.js');
 const modules_eyes_index = require('./modules/eyes/index.js');
 const modules_lips_index = require('./modules/lips/index.js');
 const modules_lipsLiner_index = require('./modules/lips-liner/index.js');
 const modules_lutFilter_index = require('./modules/lut-filter/index.js');
 const modules_makeup_index = require('./modules/makeup/index.js');
-// const modules_neck_index = require('./modules/neck/index.js');
 const modules_skin_index = require('./modules/skin/index.js');
 const modules_softlight_index = require('./modules/softlight/index.js');
 const modules_teeth_index = require('./modules/teeth/index.js');
@@ -26,19 +22,15 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 const background__default = /*#__PURE__*/_interopDefaultLegacy(background);
 
-bnb.log(`\n\nMakeup API version: ${"1.4.0-17b1522e7b2b5ae9936f19e1b30f1015486069a9"}\n`);
+bnb.log(`\n\nMakeup API version: ${"1.4.0-291dce8f85a7bbc7e6018d90d49bcbe0fb4d16f5"}\n`);
 const Skin = new modules_skin_index.Skin();
-// const Neck = new modules_neck_index.Neck();
 const Eyes = new modules_eyes_index.Eyes();
 const Teeth = new modules_teeth_index.Teeth();
 const Lips = new modules_lips_index.Lips();
 const Makeup = new modules_makeup_index.Makeup();
-const GlossyEyeShadow = new modules_glossyEyeshadows_index.GlossyEyeShadow();
-const GlossyHighliqhter = new modules_glossyHighlighter_index.GlossyHighliqhter();
-const GlossyBlush = new modules_glossyBlush_index.GlossyBlush();
 const LipsLiner = new modules_lipsLiner_index.LipsLiner();
-const Eyelashes3d = new modules_eyelashes_index.Eyelashes3d();
-const Eyebrows = new modules_brows_index.Eyebrows();
+const Eyelashes = new modules_eyelashes_index.Eyelashes();
+const Brows = new modules_brows_index.Brows();
 const Softlight = new modules_softlight_index.Softlight();
 const Hair = new modules_hair_index.Hair();
 const Filter = new modules_lutFilter_index.LutFilter();
@@ -121,17 +113,13 @@ const EyeBagsRemoval = new modules_eyeBags_index.EyeBagsRemoval();
  */
 const setState = modules_index.createSetState({
     Skin,
-    // Neck,
     Eyes,
     Teeth,
     Lips,
     Makeup,
-    GlossyEyeShadow,
-    GlossyHighliqhter,
-    GlossyBlush,
     LipsLiner,
-    Eyelashes3d,
-    Eyebrows,
+    Eyelashes,
+    Brows,
     Softlight,
     Hair,
     Filter,
@@ -140,19 +128,15 @@ const setState = modules_index.createSetState({
 
 const m = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    Background: background__default["default"],
+    Background: background__default['default'],
     Skin: Skin,
-    // Neck: Neck,
     Eyes: Eyes,
     Teeth: Teeth,
     Lips: Lips,
     Makeup: Makeup,
-    GlossyEyeShadow: GlossyEyeShadow,
-    GlossyHighliqhter: GlossyHighliqhter,
-    GlossyBlush: GlossyBlush,
     LipsLiner: LipsLiner,
-    Eyelashes3d: Eyelashes3d,
-    Eyebrows: Eyebrows,
+    Eyelashes: Eyelashes,
+    Brows: Brows,
     Softlight: Softlight,
     Hair: Hair,
     Filter: Filter,

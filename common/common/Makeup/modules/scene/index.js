@@ -241,7 +241,7 @@ const isGeometry = (obj) => obj instanceof PlaneGeometry || obj instanceof QuadG
 
 const assets$2 = bnb.scene.getAssetManager();
 class ShaderMaterial {
-    constructor({ vertexShader, fragmentShader, builtIns = [], uniforms = {}, state = {}, }) {
+    constructor({ vertexShader, fragmentShader, builtIns = [], uniforms = {}, state = {}, instance_count = 0, }) {
         var _a, _b, _c, _d, _e, _f;
         Object.defineProperty(this, "$$", {
             enumerable: true,
@@ -264,10 +264,8 @@ class ShaderMaterial {
         }
         const vs = vertexShader.replace(/\.vert$/, "");
         const fs = fragmentShader.replace(/\.frag$/, "");
-        if (vs !== fs)
-            throw new Error(`Vertex shader name should match fragment shader name. Received: "${vertexShader}", "${fragmentShader}"`);
         const name = isBuiltin ? vs : id(`${vs}.`);
-        const material = (_a = assets$2.findMaterial(name)) !== null && _a !== void 0 ? _a : assets$2.createMaterial(name, vs);
+        const material = (_a = assets$2.findMaterial(name)) !== null && _a !== void 0 ? _a : assets$2.createMaterialExt(name, vs, fs, instance_count, []);
         material.setState(new bnb.State(bnb.BlendingMode[(_b = state.blending) !== null && _b !== void 0 ? _b : "ALPHA"], (_c = state.zWrite) !== null && _c !== void 0 ? _c : false, (_d = state.zTest) !== null && _d !== void 0 ? _d : false, (_e = state.colorWrite) !== null && _e !== void 0 ? _e : true, (_f = state.backFaces) !== null && _f !== void 0 ? _f : false));
         for (let name in uniforms) {
             const uniform = uniforms[name];
@@ -316,7 +314,7 @@ class BlitMaterial extends ShaderMaterial {
             vertexShader: shader,
             fragmentShader: shader,
             uniforms: { tex_src: texture },
-            state,
+            state
         });
     }
 }
@@ -411,6 +409,9 @@ class Attachment {
             const _info = attachment.getInfo();
             _info.storedBehaviour = bnb.AttachmentStoreOp[info.store];
             attachment.setInfo(_info);
+        }
+        if (typeof info.format !== "undefined") {
+            attachment.setFormat(bnb.PixelFormatType[info.format]);
         }
         this.$$ = image;
     }
@@ -767,7 +768,6 @@ class SegmentationMask {
             mask = assets.createSegmentationMask(name, bnb.SegmentationMaskType[type]);
         }
         this.$$ = mask;
-
     }
     enable() {
         this.$$.asSegmentationMask().setActive(true);

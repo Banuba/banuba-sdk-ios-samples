@@ -15,17 +15,24 @@ class Teeth {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: new modules_scene_index.Mesh(new modules_scene_index.FaceGeometry(), new modules_scene_index.ShaderMaterial({
+            value: new modules_scene_index.Mesh(new modules_scene_index.QuadGeometry(), new modules_scene_index.ShaderMaterial({
                 vertexShader,
                 fragmentShader,
                 uniforms: {
                     tex_camera: new modules_scene_index.Camera(),
+                    tex_mask: new modules_scene_index.SegmentationMask("TEETH"),
                     tex_whitening: new modules_scene_index.LUT(Whitening),
                     var_teeth_whitening_strength: new modules_scene_index.Vector4(0),
                 },
+                state: {
+                    backFaces: true,
+                },
             }))
         });
-        this._teeth.material.uniforms.var_teeth_whitening_strength.subscribe(([strength]) => this._teeth.visible(strength > 0));
+        this._teeth.material.uniforms.var_teeth_whitening_strength.subscribe(([strength]) => {
+            this._teeth.visible(strength > 0);
+            this._teeth.material.uniforms.tex_mask.enable();
+        });
         modules_scene_index.add(this._teeth);
     }
     /** Sets the teeth whitening strength from 0 to 1 */

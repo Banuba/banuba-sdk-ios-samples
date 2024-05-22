@@ -57,8 +57,6 @@ vec3 lipstik(vec3 bg)
         bg_color_hsv.b
     );
 
-    if (js_lips_color.w <= 0.01) color_lipstick.xy = mix( bg_color_hsv.xy, color_lipstick.xy, js_lips_color.w );
-
     return color_lipstick;
 }
 
@@ -106,7 +104,7 @@ void main()
 
     float vCoef = js_lips_shine.y;
     float sCoef1 = js_lips_shine.z;
-    float bCoef = js_lips_shine.w;
+    float bCoef = js_lips_shine.w * v_scale;
     float a = 20.;
     float b = .75;
 
@@ -136,13 +134,6 @@ void main()
     );
 
     color = mix(color, hsv2rgb(color_shine), shineAlpha);
-	// color = shineAlpha * hsv2rgb( color_shine ) + (1. - shineAlpha) * mix(bg,color,js_lips_color.w);
 
-    float opacity = js_lips_color.w;
-
-    if(js_lips_color == vec4(0., 0., 0., 0.01)){
-        opacity = 1.0;
-    }
-
-    bnb_FragColor = vec4(mix(bg, color,  opacity), maskAlpha);
+    bnb_FragColor = vec4(mix(bg, color, js_lips_color.w), maskAlpha);
 }

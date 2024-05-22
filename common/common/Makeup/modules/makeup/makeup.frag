@@ -13,9 +13,6 @@ BNB_DECLARE_SAMPLER_2D(8, 9, tex_eyeliner);
 BNB_DECLARE_SAMPLER_2D(10, 11, tex_lashes);
 BNB_DECLARE_SAMPLER_2D(12, 13, tex_makeup);
 
-BNB_IN(2) vec2 var_face_mask_uv;
-BNB_DECLARE_SAMPLER_2D(14, 15, tex_face_mask);
-
 vec4 blend(vec4 base, vec4 target, BNB_DECLARE_SAMPLER_2D_ARGUMENT(tex_mask))
 {
     vec4 tex = BNB_TEXTURE_2D(BNB_SAMPLER_2D(tex_mask), var_face_uv);
@@ -50,7 +47,4 @@ void main()
     bnb_FragColor = blend(bnb_FragColor, BNB_PASS_SAMPLER_ARGUMENT(tex_makeup));
     bnb_FragColor = blend(bnb_FragColor, var_eyeliner_color, BNB_PASS_SAMPLER_ARGUMENT(tex_eyeliner));
     bnb_FragColor = blend(bnb_FragColor, var_lashes_color, BNB_PASS_SAMPLER_ARGUMENT(tex_lashes));
-
-    float face_mask = textureLod(BNB_SAMPLER_2D(tex_face_mask), var_face_mask_uv, 0.).x;
-    bnb_FragColor *= face_mask;
 }

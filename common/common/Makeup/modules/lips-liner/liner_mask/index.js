@@ -3,10 +3,11 @@
 require('bnb_js/global');
 const modules_scene_index = require('../../scene/index.js');
 
-const MaskVertexShader0 = "modules/lips-liner/liner_mask/liner0.vert";
-const MaskVertexShader1 = "modules/lips-liner/liner_mask/liner1.vert";
-const MaskVertexShader2 = "modules/lips-liner/liner_mask/liner2.vert";
+const MaskVertexShader = "modules/lips-liner/liner_mask/liner0.vert";
 
+const MaskVertexShader1 = "modules/lips-liner/liner_mask/liner1.vert";
+
+const MaskVertexShader2 = "modules/lips-liner/liner_mask/liner2.vert";
 
 const Liner0FragmentShader = "modules/lips-liner/liner_mask/liner0.frag";
 
@@ -16,7 +17,7 @@ const Liner2FragmentShader = "modules/lips-liner/liner_mask/liner2.frag";
 
 function LinerMask() {
     const liner0 = new modules_scene_index.Pass(new modules_scene_index.ShaderMaterial({
-        vertexShader: MaskVertexShader0,
+        vertexShader: MaskVertexShader,
         fragmentShader: Liner0FragmentShader,
         uniforms: {
             lips_mask: new modules_scene_index.SegmentationMask("LIPS"),
@@ -48,7 +49,6 @@ function LinerMask() {
         fragmentShader: Liner2FragmentShader,
         uniforms: {
             liner1: liner1,
-
         },
         state: {
             blending: "OFF",
