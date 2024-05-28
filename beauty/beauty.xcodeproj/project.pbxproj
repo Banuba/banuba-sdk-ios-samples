@@ -17,6 +17,7 @@
 		13DF0CE52BF62C0100770192 /* BNBEyes in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE42BF62C0100770192 /* BNBEyes */; };
 		13DF0CE82BF62C0A00770192 /* BNBLips in Frameworks */ = {isa = PBXBuildFile; productRef = 13DF0CE72BF62C0A00770192 /* BNBLips */; };
 		4C14F3B32BFCADFD00273A93 /* BNBBackground in Frameworks */ = {isa = PBXBuildFile; productRef = 4C14F3B22BFCADFD00273A93 /* BNBBackground */; };
+		4C622C252C05E9B40041B684 /* 0003_cu_Spider1_v3_b1 in Resources */ = {isa = PBXBuildFile; fileRef = 4C622C242C05E9B40041B684 /* 0003_cu_Spider1_v3_b1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		1383E9A52BCE9F5100660AE3 /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../common/common.xcodeproj; sourceTree = "<group>"; };
 		1383E9B62BCE9FFF00660AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../common/common/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1389282C2BD285B900E94AD2 /* Makeup */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Makeup; path = ../../common/common/Makeup; sourceTree = "<group>"; };
+		4C622C242C05E9B40041B684 /* 0003_cu_Spider1_v3_b1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = 0003_cu_Spider1_v3_b1; path = ../../spider/spider/0003_cu_Spider1_v3_b1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		1383E9902BCE98D400660AE3 /* beauty */ = {
 			isa = PBXGroup;
 			children = (
+				4C622C242C05E9B40041B684 /* 0003_cu_Spider1_v3_b1 */,
 				1389282C2BD285B900E94AD2 /* Makeup */,
 				1383E9952BCE98D400660AE3 /* ViewController.swift */,
 				1383E9B52BCE9FFF00660AE3 /* LaunchScreen.storyboard */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C622C252C05E9B40041B684 /* 0003_cu_Spider1_v3_b1 in Resources */,
 				1389282D2BD285B900E94AD2 /* Makeup in Resources */,
 				1383E9992BCE98D400660AE3 /* Main.storyboard in Resources */,
 				1383E9B72BCE9FFF00660AE3 /* LaunchScreen.storyboard in Resources */,

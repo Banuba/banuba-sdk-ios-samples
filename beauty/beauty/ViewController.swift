@@ -43,6 +43,8 @@ class ViewController: UIViewController {
     // Output surface for the `Player`
     @IBOutlet weak var effectView: EffectPlayerView!
     
+    @IBOutlet weak var spiderButton: UIButton!
+    @IBOutlet weak var makeupButton: UIButton!
     // Input stream for the `Player`
     private let cameraDevice = CameraDevice(
         cameraMode: .FrontCameraSession,
@@ -64,6 +66,10 @@ class ViewController: UIViewController {
         player?.use(input: Camera(cameraDevice: cameraDevice))
         player?.use(outputs: [effectView])
         
+        // Start feeding frames from camera
+        cameraDevice.start()
+    }
+    @IBAction func onMakeup(_ sender: Any) {
         // Load effect from `effects` folder
         effect = player?.load(effect: "Makeup")
         
@@ -71,11 +77,12 @@ class ViewController: UIViewController {
         // place it at the end of `config.js` in Makeup effect (see effect folder
         // in this project files.
         effect?.evalJs(beautyConfig, resultCallback: nil)
-        
-        // Start feeding frames from camera
-        cameraDevice.start()
     }
-
+    
+    @IBAction func onSpider(_ sender: Any) {
+        player?.load(effect: "0003_cu_Spider1_v3_b1")
+    }
+    
     @IBAction func closeCamera(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
