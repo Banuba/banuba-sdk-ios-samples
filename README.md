@@ -19,16 +19,7 @@ Feel free to [contact us](https://docs.banuba.com/face-ar-sdk-v1/support) if you
 
 ## Examples for integrating [Banuba SDK on iOS](https://docs.banuba.com/face-ar-sdk-v1/ios/ios_getting_started) into Swift apps.  
 This repository contains the following examples:   
-- [`camera`](camera/) apply effect to stream from camera and show it on the screen,  
-- [`photo`](photo/) apply effect to photo from the gallery,  
-- [`video_processing`](video_processing/) apply effect to video from the gallery,  
-- [`video_recording`](video_recording/) apply effect to video from camera and record video,
-- [`avatar`](avatar/) customizable avatar effect (see comments in code how to change the avatar),
-- [`beauty`](beauty/) basic sample how to aply beauty, this sample can be used for medical application too,
-- [`photo_edit`](photo_edit/) apply Makeup effect to photo and use Makeup API in realtime, 
-- [`hands`](hands/) set of samples related to hands (rings, watch, gestures etc.),  
-- [`videocall`](videocall/) demonstrates Agora.io SDK integration to enable augmented reality filters in video calls.
-- [`spider`](spider/) apply spider effect with animations  
+- [`beauty`](beauty/) basic sample with makeup and spider effects
 
 Please, note, that individual samples may contain own `README` files. Consider them.
 
