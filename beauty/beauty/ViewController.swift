@@ -24,22 +24,33 @@ function FaceReshape(strength){
         tip_width: -0.4 * strength
     });
     FaceMorph.lips({size: 0.3 * strength});
+    
+    if (Math.random() < 0.5) {
+        // some random error
+        throw new Error("invalid state");
+    }
 }
 
-FaceMorph.eyes({enlargement: 0.5});
-FaceReshape(1.0);
-Lips.color("0.898 0.431 0.663 0.9");
-Skin.softening(1.0);
-Background.blur(0.55);
-Makeup.blushes("0.871 0.365 0.514 0.5");
-Eyes.color("0.082 0.412 0.780 0.5");
-Brows.color("0.004 0.004 0.004 0.4");
-Teeth.whitening(0.5);
-Eyes.whitening(0.2);
-Makeup.eyeshadow("0.322 0.341 0.435 0.5");
+function SetBeauty(){
+    FaceMorph.eyes({enlargement: 0.5});
+    FaceReshape(1.0);
+    Lips.color("0.898 0.431 0.663 0.9");
+    Skin.softening(1.0);
+    Background.blur(0.55);
+    Makeup.blushes("0.871 0.365 0.514 0.5");
+    Eyes.color("0.082 0.412 0.780 0.5");
+    Brows.color("0.004 0.004 0.004 0.4");
+    Teeth.whitening(0.5);
+    Eyes.whitening(0.2);
+    Makeup.eyeshadow("0.322 0.341 0.435 0.5");
+    
+    return true;
+}
+
+SetBeauty();
 """
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BNBJsCallback {
     // Output surface for the `Player`
     @IBOutlet weak var effectView: EffectPlayerView!
     
@@ -70,10 +81,19 @@ class ViewController: UIViewController {
         // This will evalute JS code in context of Makeup effect. You may also
         // place it at the end of `config.js` in Makeup effect (see effect folder
         // in this project files.
-        effect?.evalJs(beautyConfig, resultCallback: nil)
+        effect?.evalJs(beautyConfig, resultCallback: self)
         
         // Start feeding frames from camera
         cameraDevice.start()
+    }
+    
+    func onResult(_ result: String) {
+        if result == "true" {
+            print("Success")
+        } else {
+            // `null` or `false` result is an error
+            print("Failed")
+        }
     }
 
     @IBAction func closeCamera(_ sender: UIBarButtonItem) {
