@@ -1,5 +1,29 @@
-# banuba-sdk-ios-samples
-[![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://docs.banuba.com/far-sdk/tutorials/development/basic_integration?platform=ios)
+This repository contains code samples for implementing [Banuba Face AR SDK](https://www.banuba.com/facear-sdk/face-filters) for iOS. 
+It covers various applications, from applying face and [hand AR](https://www.banuba.com/technology/hand-tracking-and-gesture-recognition) 
+effects to integrating 
+with [Agora.io](http://Agora.io) SDK for video calls.
+
+![image](image.gif)
+
+Face AR SDK is a multipurpose toolkit for integrating augmented reality features and effects. Its main features include:
+
+* Beauty effects
+* Virtual makeup
+* Virtual backgrounds
+* Face masks
+* Virtual nail polish & fake nails
+* Color filters
+* Avatars
+* Etc.
+
+It is designed to increase development velocity, increase user engagement, and boost app downloads. 
+
+Banuba Face AR SDK doesn’t collect, store, or process any user data, making it secure by design and compliant 
+with GDPR and other data protection regulations. It is also flexible, allowing you to choose only 
+the features that you need, optimizing your budget and app size.
+
+![image](image.jpg)
+
 
 ## [Requirements](https://docs.banuba.com/far-sdk/tutorials/capabilities/system_requirements)
 
