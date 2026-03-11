@@ -476,24 +476,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBHands";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CEE2BF62CA300770192 /* XCRemoteSwiftPackageReference "BNBWatch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBWatch";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CF12BF62CE700770192 /* XCRemoteSwiftPackageReference "BNBSdkApi" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

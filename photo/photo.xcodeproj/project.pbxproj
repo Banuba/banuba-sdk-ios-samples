@@ -421,16 +421,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CF92BF62DE500770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

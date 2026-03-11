@@ -429,32 +429,32 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBSdkApi";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CE02BF62BF300770192 /* XCRemoteSwiftPackageReference "BNBFaceTracker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBFaceTracker";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CE32BF62C0100770192 /* XCRemoteSwiftPackageReference "BNBEyes" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBEyes";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 		13DF0CE62BF62C0A00770192 /* XCRemoteSwiftPackageReference "BNBLips" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sdk-banuba/BNBLips";
 			requirement = {
-				kind = exactVersion;
-				version = 1.17.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
