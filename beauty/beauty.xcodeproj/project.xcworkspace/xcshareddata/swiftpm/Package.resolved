@@ -1,5 +1,5 @@
 {
-  "originHash" : "925a3bcdb400dbf90eb98228c3f319b4bc13b4677675017c1b32993130ce6a8c",
+  "originHash" : "ff1fcc8a2731860da3e3424bce05d635a750730c73a15e9d2b26501519a74840",
   "pins" : [
     {
       "identity" : "bnbeffectplayer",
@@ -38,6 +38,15 @@
       }
     },
     {
+      "identity" : "bnbmakeup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sdk-banuba/BNBMakeup",
+      "state" : {
+        "revision" : "847360ad3c1b6ba986103af61dcde32436dcc844",
+        "version" : "1.18.0"
+      }
+    },
+    {
       "identity" : "bnbscripting",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBScripting.git",
@@ -61,6 +70,15 @@
       "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
       "state" : {
         "revision" : "38dd1d3345081e95969650a250b7708338521b98",
+        "version" : "1.18.0"
+      }
+    },
+    {
+      "identity" : "bnbskin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sdk-banuba/BNBSkin.git",
+      "state" : {
+        "revision" : "94993f06ce72667b002ff634d26ccc92f2a86e58",
         "version" : "1.18.0"
       }
     }
