@@ -1,13 +1,13 @@
 {
-  "originHash" : "6b3f533137f3505823f08279b559307e2e33f59a8c193e9ee8e18bf1a55814cf",
+  "originHash" : "930852985622d9d67e93ad3bcd1bb83ebceb7ec56cdca3a48419895d57207318",
   "pins" : [
     {
       "identity" : "bnbeffectplayer",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBEffectPlayer.git",
       "state" : {
-        "revision" : "fb361d9c54b1f54808cdfb0ff5dd9fcd83ed7cee",
-        "version" : "1.18.0"
+        "revision" : "63b906f30266b38d754b90c1e2f26e02941a5625",
+        "version" : "1.18.5"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBFaceTracker",
       "state" : {
-        "revision" : "4885484205caf1a488fa651143c92ef90d53bb5e",
-        "version" : "1.18.0"
+        "revision" : "7b4487dcd81478d6cac44f16b69a30b71f72c5e3",
+        "version" : "1.18.5"
       }
     },
     {
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBScripting.git",
       "state" : {
-        "revision" : "626d6647ff7770bc68f42a6c66b263494bdfc388",
-        "version" : "1.18.0"
+        "revision" : "7257a1c026711346b04191fdbb02ffbeb8c089ad",
+        "version" : "1.18.5"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkApi",
       "state" : {
-        "revision" : "9b3233c4f26fed1eb57d99556626d962b3b8ebdc",
-        "version" : "1.18.0"
+        "revision" : "f959629903c60a2ab92a08f9777c1900af4e022f",
+        "version" : "1.18.5"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sdk-banuba/BNBSdkCore.git",
       "state" : {
-        "revision" : "38dd1d3345081e95969650a250b7708338521b98",
-        "version" : "1.18.0"
+        "revision" : "114d3530ec0027b22b659fb90bfb6a4b454b1ff4",
+        "version" : "1.18.5"
       }
     }
   ],

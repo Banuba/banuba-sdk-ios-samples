@@ -30,11 +30,10 @@
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0TS-yR-RX8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" systemColor="tableBackgroundColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="SELECT IMAGE">
-                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                                </buttonConfiguration>
+                                                <color key="backgroundColor" systemColor="tableBackgroundColor"/>
+                                                <state key="normal" title="SELECT IMAGE">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="selectImage:" destination="cng-Vf-Mgj" eventType="touchUpInside" id="ogK-ls-uNF"/>
                                                 </connections>
